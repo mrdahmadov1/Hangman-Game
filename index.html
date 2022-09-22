@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-100">
 
 <head>
   <meta charset="UTF-8">
@@ -20,10 +20,39 @@
   </script>
 
   <!-- Custom Javascript Link -->
-  <script src="assets/javacsript/game.js"></script>
+  <script defer src="assets/javacsript/game.js"></script>
 </head>
 
-<body>
+<body class="d-flex align-items-center justify-content-center">
+  <div class="container">
+
+    <div class="row d-flex align-items-center justify-content-center">
+
+      <div class="col col-12 col-md-6 text-center hangmanInfo">
+        <h1 class="title">Hangman Game</h1>
+        <h4 class="subTitle">Press any key to get started!</h4>
+        <div class="currentWord">
+          <p>Current Word</p>
+          <p class="word"></p>
+        </div>
+        <div class="numberOfGuess">
+          <p>Number of Guessing Remaining</p>
+          <p class="remainingGuessCount">15</p>
+        </div>
+        <div class="alreadyGuessed">
+          <p>Letters Alerady Guessed</p>
+          <p class="letters">No Guesswork</p>
+        </div>
+
+        <button class="btnAgain">Again</button>
+      </div>
+
+      <div class="col col-12 col-md-6 hangmanImage">
+        <img src="assets/images/step-0.png" alt="Step 4" class="imageStep">
+      </div>
+    </div>
+  </div>
+
 </body>
 
 </html>
