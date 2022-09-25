@@ -26,7 +26,7 @@ const image = document.querySelector(".imageStep");
 const btnAgain = document.querySelector(".btnAgain");
 
 let texmin = Array(sozler[randomIndex].length).fill("_").join("");
-let counter = 11;
+let counter = 10;
 word.textContent = texmin;
 remainingGuessCount.textContent = counter;
 
@@ -44,6 +44,7 @@ window.onkeyup = function (e) {
       counter--;
       guessedLettersArray.push(e.key);
     }
+
     guessedLetters.textContent = guessedLettersArray;
     remainingGuessCount.textContent = counter;
 
@@ -57,8 +58,6 @@ window.onkeyup = function (e) {
         }
       }
     }
-    console.log(texmin);
-    console.log(sozler[randomIndex]);
   } else {
     alert(`Herf daxi edin!`);
   }
@@ -67,8 +66,9 @@ window.onkeyup = function (e) {
 btnAgain.addEventListener("click", function () {
   randomIndex = Math.floor(Math.random() * sozler.length + 1);
 
-  counter = 11;
+  counter = 10;
   remainingGuessCount.textContent = counter;
+  image.src = `assets/images/step-${0}.png`;
 
   guessedLettersArray = [];
   guessedLetters.textContent = "No Guesswork";
